@@ -1,0 +1,39 @@
+/* Estilos generales y sencillos */
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+button { cursor: pointer; border: none; padding: 10px 15px; border-radius: 8px; background-color: #007bff; color: white; font-weight: bold; }
+button:hover { background-color: #0056b3; }
+input { padding: 10px; border: 1px solid #ccc; border-radius: 8px; width: calc(100% - 22px); }
+
+/* Contenedor de Login/Registro */
+.auth-container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 350px; text-align: center; }
+.auth-container h2 { margin-top: 0; }
+.auth-container form { display: flex; flex-direction: column; gap: 15px; }
+.auth-container hr { border: 0; border-top: 1px solid #ddd; margin: 20px 0; }
+.message { margin-top: 15px; font-weight: bold; }
+.message.success { color: green; }
+.message.error { color: red; }
+
+/* Contenedor del Chat */
+.chat-wrapper { display: flex; width: 100vw; height: 100vh; background: white; }
+.sidebar { width: 240px; background-color: #f4f4f4; border-right: 1px solid #ddd; padding: 20px; display: flex; flex-direction: column; }
+.sidebar h3 { margin-top: 0; }
+.sidebar #online-users { list-style: none; padding: 0; flex-grow: 1; }
+.sidebar #online-users li { padding: 8px; cursor: pointer; border-radius: 5px; }
+.sidebar #online-users li:hover { background-color: #e2e2e2; }
+.sidebar button { width: 100%; margin-top: 10px; }
+#logout-btn { background-color: #dc3545; }
+#logout-btn:hover { background-color: #c82333; }
+
+.chat-container { flex: 1; display: flex; flex-direction: column; }
+.chat-header { padding: 15px 20px; border-bottom: 1px solid #ddd; }
+.messages-area { flex-grow: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column-reverse; }
+.message-bubble { max-width: 70%; padding: 10px 15px; border-radius: 18px; margin-bottom: 10px; line-height: 1.4; word-wrap: break-word; }
+.message-bubble.sent { background-color: #007bff; color: white; align-self: flex-end; }
+.message-bubble.received { background-color: #e9e9eb; color: black; align-self: flex-start; }
+.message-bubble .sender { font-size: 0.8em; font-weight: bold; margin-bottom: 5px; }
+.message-bubble img { max-width: 100%; border-radius: 10px; margin-top: 5px; }
+.system-message { text-align: center; color: #888; font-style: italic; font-size: 0.9em; width: 100%; margin-bottom: 10px; }
+.message-input-form { display: flex; padding: 20px; border-top: 1px solid #ddd; }
+.message-input-form input[type="text"] { flex-grow: 1; }
+.message-input-form button { margin-left: 10px; }
+.file-upload-label { font-size: 1.5rem; cursor: pointer; padding: 5px 10px; }

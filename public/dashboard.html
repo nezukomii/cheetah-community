@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Comunidad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-wrapper">
+        <aside class="sidebar">
+            <h3>Usuarios en línea</h3>
+            <ul id="online-users"></ul>
+            <button id="public-chat-btn">Chat Público</button>
+            <button id="logout-btn">Cerrar Sesión</button>
+        </aside>
+
+        <main class="chat-container">
+            <header class="chat-header">
+                <h2 id="chat-title">Chat Público</h2>
+            </header>
+            <div id="messages" class="messages-area"></div>
+            <form id="message-form" class="message-input-form">
+                <input type="text" id="message-input" placeholder="Escribe un mensaje..." autocomplete="off">
+                <label for="image-input" class="file-upload-label">🖼️</label>
+                <input type="file" id="image-input" accept="image/*" style="display: none;">
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/partykit@0.0.95/dist/party.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

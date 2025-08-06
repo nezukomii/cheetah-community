@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a la Comunidad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div id="login-form">
+            <h2>Iniciar Sesión</h2>
+            <form id="form-login">
+                <input type="text" id="login-username" placeholder="Nombre de usuario" required>
+                <input type="password" id="login-password" placeholder="Contraseña" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+        <hr>
+        <div id="register-form">
+            <h2>¿No tienes cuenta? Regístrate</h2>
+            <form id="form-register">
+                <input type="text" id="register-username" placeholder="Elige un nombre de usuario" required>
+                <input type="password" id="register-password" placeholder="Crea una contraseña" required>
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+        <p id="message-container" class="message"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

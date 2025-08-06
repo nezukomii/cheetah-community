@@ -1,0 +1,30 @@
+name = "cheetah-community"
+main = "src/index.js" # Define el punto de entrada principal
+compatibility_date = "2025-08-05"
+
+# Importante: Esto le dice a Wrangler que use el formato de Módulos ES
+[build]
+command = "" # No necesitamos un comando de build externo
+upload.format = "modules"
+
+[[build.rules]]
+type = "ESModule"
+globs = ["**/*.js"]
+
+# Vincula tu Worker a tu base de datos D1
+[[d1_databases]]
+binding = "DB"
+database_name = "cheetah-database" # Cambia esto
+database_id = "ed9aee10-5e51-47f2-909f-9e5df7ed1dee" # Pega el ID de tu D1 aquí
+
+# Sirve tu carpeta 'public' como un sitio web estático
+[site]
+bucket = "./public"
+
+# La configuración de PartyKit. El CLI de PartyKit la leerá correctamente.
+[partykit]
+main = "party/chat.js"
+
+# Variables de entorno y secretos
+[vars]
+BCRYPT_SALT_ROUNDS = "10"

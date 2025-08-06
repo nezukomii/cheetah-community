@@ -1,0 +1,19 @@
+{
+    "name": "comunidad-app",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "dev": "partykit dev",
+      "deploy": "partykit deploy"
+    },
+    "dependencies": {
+      "@vercel/blob": "^0.23.2",
+      "bcryptjs": "^2.4.3",
+      "hono": "^4.2.3",
+      "partykit": "^0.0.95"
+    },
+    "devDependencies": {
+      "@cloudflare/workers-types": "^4.20240403.0",
+      "wrangler": "^3.47.0"
+    }
+  }
