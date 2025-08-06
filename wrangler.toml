@@ -1,4 +1,4 @@
-name = "cheetah-community"
+name = "popchet-community"
 main = "src/index.js"
 compatibility_date = "2025-08-05"
 compatibility_flags = ["nodejs_compat"]
