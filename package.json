@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-      "dev": "partykit dev",
-      "deploy": "partykit deploy"
+      "deploy": "wrangler pages deploy public",
+      "dev": "wrangler pages dev public"
     },
     "dependencies": {
       "@vercel/blob": "^0.23.2",
