@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import { handle as partykitHandle } from "partykit/server";
-import * as party from '../party/chat.js';
+import party from '../party/chat.js';
 import bcrypt from 'bcryptjs';
 import { handleUpload } from '@vercel/blob/client';
 
