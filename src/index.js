@@ -88,13 +88,19 @@ app.post('/api/upload', async (c) => {
     }
 });
 
-// 5. Enrutador principal
-// Hono manejará las rutas API, y reenviará las peticiones de PartyKit.
+// 5. Enrutador principal que combina Hono y PartyKit
 const partykitServer = new PartyKitServer({ party });
 
-// Reenviar peticiones de WebSocket/HTTP a PartyKit
-app.all('/party/*', (c) => partykitServer.fetch(c.req.raw, c.env, c.executionCtx));
+export default {
+  async fetch(request, env, ctx) {
+    const url = new URL(request.url);
 
-// Exportar la aplicación Hono como el manejador principal.
-// Cloudflare Pages ejecutará esto para cada petición.
-export default app;
+    // Si la petición es para el chat, la maneja PartyKit
+    if (url.pathname.startsWith("/party/")) {
+      return partykitServer.fetch(request, env, ctx);
+    }
+
+    // Para todo lo demás, la maneja la API de Hono
+    return app.fetch(request, env, ctx);
+  },
+};
